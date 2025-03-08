@@ -1,3 +1,4 @@
+/*
 console.log("hello world")
 const heros = ["spiderman","IronMan","Thor"]//array
 let myObj ={
@@ -7,6 +8,7 @@ let myObj ={
 const myFunction = function(){
     console.log(heros[0])
 }
+*/
 //myFunction()//function 
 /*
 console.log(typeof(myFunction)) //function
@@ -60,3 +62,10 @@ console.log(formattedDate); // e.g., "Friday, March 7, 2025"
 
 */
 
+/* Arrray 
+const heros = new Array("spiderman","Batman","Ironman")
+const villain =["Thanos","Joker","Ultron"]
+//console.log(heros.concat(villain))//concat
+console.log([...heros,...villain])//spread
+
+*/
