@@ -39,5 +39,12 @@
 // }
 // console.log(jsUser.greetingTwo())
 
+ //destructing an object 
+//  const course = {
+//     name :"javascript",
+//     id: 1
+//  }
+//  const {name : n} = course;
+//  console.log(n)
 
  
