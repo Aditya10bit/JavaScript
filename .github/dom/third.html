@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | PART TWO </title>
+</head>
+<body style=" background-color: #16073a ; color : #FFFFFF ">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+<script>
+    const parent = document.querySelector(".parent")
+    console.log(parent)//return the parent 
+    console.log(parent.children)//returns the html collection from the parent 
+    console.log(parent.children[0].innerText)//gives the first children's inner text 
+    console.log(parent.firstElementChild)//returns the first child also works for last child
+    for(let i = 0 ; i <parent.children.length;i++){
+        parent.children[i].style.color = "gold"
+    }
+
+    // going from children to parent 
+    const dayOne = document.querySelector('.day')
+    console.log(dayOne)
+    console.log(dayOne.parentElement)//gives the whole parent 
+    console.log(dayOne.nextElementSibling)//gives the next sibling 
+
+    console.log("nodes :" , parent.childNodes) //returns the node list of the parent 
+</script>
+</body>
+</html>
