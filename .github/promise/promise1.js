@@ -1,0 +1,62 @@
+// const promiseOne = new Promise(function(resolve,reject){
+//    // do an async task
+//    setTimeout(()=>{
+//     console.log("Async task completed")
+//     resolve()
+//    },1000) 
+// })
+// //then is related to resolve 
+// promiseOne.then(()=>{
+//     console.log("Promise completed")
+// })
+
+// //data consumption 
+//  new Promise(function(resolve,reject){
+//     setTimeout(()=>{
+//         resolve({name:"aditya",email:"adityadas@gmail.com"})
+//     },1000)
+//  }).then((user)=>{  
+//     console.log(user)
+//  })
+
+ //catching errors 
+ const promiseThree = new Promise(function(resolve,reject){
+    setTimeout(()=>{
+        let error = false
+        if(!error){
+            resolve({name:"aditya",email:"adityadas@gmail.com"})
+        }else{
+            reject("error !something went wrong!")
+        }
+    },1000)
+ })
+
+//  promiseThree.then((user)=>{
+//     console.log(user)
+//     return user.name
+//  }).then((username)=>{
+//     console.log(username) //get the username that is returned from the first then()
+//  }).catch((error)=>{
+//     console.log(error)
+//  }).finally(()=>{
+//     console.log("promise is executed")
+//  })
+
+
+ //another approach using try catch block and async await 
+  async function PromiseThreeconsume() {
+    try{
+     // Await the promise and get the user object
+    const user = await promiseThree;
+    console.log(user); // Log the user object
+    // Extract the username from the user object
+    const username = user.name;
+    console.log(username); // Log the username
+    }catch(error){
+        console.log(error)
+    }finally {
+        console.log("promise is executed"); // Execute cleanup code
+      }
+  }
+
+  PromiseThreeconsume()
